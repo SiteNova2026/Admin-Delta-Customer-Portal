@@ -1,0 +1,13 @@
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+
+    container_name: delta-customer-frontend-prod
+
+    restart: unless-stopped
+
+    ports:
+      - "8081:81"
